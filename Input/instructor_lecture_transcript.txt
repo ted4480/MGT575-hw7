@@ -1,0 +1,27 @@
+Lecture 17 — AI Screenplays (instructor voice, approximate transcript for style modeling)
+
+All right, so—welcome back everyone. Um, today we are going to talk about something that sounds a little bit like science fiction, but it is actually very practical: using AI to write long documents, and we are going to use movie screenplays as our running example. Okay? So the big picture is: generative models are amazing at short bursts of text, but if you ask for a full screenplay in one shot, things fall apart. You get drift, you get inconsistency, and honestly you get a lot of “lost in the middle” behavior where the model forgets what it promised on page three.
+
+So what I want you to take away—like, the thesis of this lecture—is that structure beats brute force. We are going to build an agentic pipeline: multiple stages, each one with a clear job, and we pass structured JSON between the stages so the system always has a global view and a local view. That is the trick.
+
+Let me say that again because it matters. Global context is your premise and your arc. Local context is “what just happened in the last few scenes or sequences.” If you only give local context, you wander. If you only give global context, the dialogue feels stiff. You want both.
+
+Okay, so—first challenge: the one-shot long-form problem. Imagine you prompt: “Write me a ninety-page screenplay.” The model might start strong! But deep into act two, you start seeing contradictions. Characters rename themselves. Locations teleport. That is not because the model is “dumb”; it is because attention is finite and the training objective is not “be consistent for ninety pages.” So we decompose.
+
+Screenplays themselves are hierarchical. At the top you have a premise: title, logline, genre, central conflict, main characters. Under that you have a story arc—often broken into acts. Under acts you have sequences: chunks of story with a goal, key locations, and an exit beat that hands off to the next sequence. And under sequences you have scenes: slug lines, action lines, dialogue blocks. So our software architecture mirrors the narrative architecture. That is intentional.
+
+Now let me walk through the agents—because this is where it gets fun. The premise agent is conversational. You sit with it for a few minutes. You refine the logline. You argue about genre. You decide what the central conflict is. Out of that comes premise.json. Then the arc agent reads premise.json and chats with you about acts: what happens in act one, act two, act three—or whatever structure you want—and it drafts act by act. That produces arc.json.
+
+Then we switch modes. The sequence agent is not really a chat agent in the way we have been using chat; it is more automated. For each sequence it sees premise.json and arc.json for the global picture, and it also sees all previous sequences so it knows what already happened. Each sequence has a goal—like, why does this chunk of movie exist—key locations, and an exit beat: how do we transition? That becomes sequence.json.
+
+The scene agent is similar. It sees premise, arc, and the sequence file for global grounding, and for local grounding it sees scenes from the current sequence plus the previous sequence so handoffs feel continuous. Scenes have slug lines and blocks of action and dialogue.
+
+And look—this pattern generalizes. Same skeleton: premise, arc, sequence, scene. For a book you might say: premise, table of contents, chapter, sub-chapter. For a podcast: concept, format, segment, beat. For a lecture—ironically—you might say learning objective, outline, module, slide. So the engineering lesson is not “screenplays are special”; the engineering lesson is hierarchical decomposition plus explicit artifacts.
+
+A few pedagogy notes in my own voice, since you are listening to me: I tend to circle back. I will restate the main idea in different words. I use short markers like “okay?” and “right?” to check engagement. I use “so” and “um” when I am thinking aloud. When I introduce a new term, I try to anchor it with an example immediately—like “exit beat” sounds abstract until you imagine the cut that propels you into the next sequence.
+
+If you implement this, please do not skip the chaining. If your slide-description agent does not actually receive prior descriptions, you are missing the point. The whole course here is about context engineering: what you pass forward is as important as the model you choose.
+
+All right. Coding session expectation: you will implement or extend a small version of this flow, maybe called Awesome-O in our materials, and you will add enhancement agents if you have time—little polish passes on premise, arc, sequences, or scenes. That is optional but it is where quality jumps.
+
+Questions? Okay—let’s move on to the diagram on the board, and we will trace data flow from premise.json all the way down to scenes.json.

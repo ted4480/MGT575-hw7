@@ -1,0 +1,31 @@
+# Generated media under project runs (do not commit per assignment)
+projects/**/slide_images/*.png
+projects/**/slide_images/*.jpg
+projects/**/audio/*.mp3
+projects/**/audio/*.wav
+projects/**/*.mp4
+projects/**/_segments/
+*.mp4
+*.m4a
+
+# Keep empty dirs optional
+!projects/**/slide_images/.gitkeep
+!projects/**/audio/.gitkeep
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.env
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+
+# Local keys (never commit)
+API_Key.rtf
+
+# Deck lives at repo root; ignore stray copies under Input/
+Input/*.pdf
