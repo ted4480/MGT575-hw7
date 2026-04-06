@@ -26,6 +26,3 @@ venv/
 
 # Local keys (never commit)
 API_Key.rtf
-
-# Deck lives at repo root; ignore stray copies under Input/
-Input/*.pdf

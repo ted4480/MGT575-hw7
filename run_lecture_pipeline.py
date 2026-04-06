@@ -65,7 +65,7 @@ def main() -> None:
         "--transcript",
         type=Path,
         default=None,
-        help="Instructor transcript (default: <repo>/Input/instructor_lecture_transcript.txt)",
+        help="Instructor transcript (default: <repo>/instructor_lecture_transcript.txt)",
     )
     parser.add_argument(
         "--keys-file",
@@ -114,7 +114,7 @@ def main() -> None:
     repo = args.repo_root.resolve()
     pdf = (args.pdf or repo / "Lecture_17_AI_screenplays.pdf").resolve()
     transcript = (
-        args.transcript or repo / "Input" / "instructor_lecture_transcript.txt"
+        args.transcript or repo / "instructor_lecture_transcript.txt"
     ).resolve()
     keys_path = (args.keys_file or default_rtf_path(repo)).resolve()
 
@@ -123,7 +123,7 @@ def main() -> None:
     if not transcript.is_file():
         raise SystemExit(
             f"Transcript not found: {transcript}\n"
-            "Add instructor_lecture_transcript.txt under Input/ (see README)."
+            "Add instructor_lecture_transcript.txt at the repository root (see README)."
         )
     if not keys_path.is_file():
         raise SystemExit(
