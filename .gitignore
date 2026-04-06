@@ -4,7 +4,7 @@ projects/**/slide_images/*.jpg
 projects/**/audio/*.mp3
 projects/**/audio/*.wav
 projects/**/*.mp4
-projects/**/_segments/
+projects/**/_segments/**
 *.mp4
 *.m4a
 

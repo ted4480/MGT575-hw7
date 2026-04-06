@@ -1,54 +1,48 @@
 {
   "source_file": "instructor_lecture_transcript.txt",
-  "tone": "Conversational, practical, and encouraging, with an underlying academic rigor. The instructor balances technical explanations with accessible language and direct address.",
-  "pacing": "The instructor's pacing is deliberate and structured. They start with a 'big picture' overview and a clear 'thesis,' then break down complex ideas into manageable 'challenges' and 'agents.' Key concepts are often repeated or restated for emphasis, and the flow includes meta-commentary on the teaching style itself.",
+  "tone": "Conversational, enthusiastic, practical, and encouraging.",
+  "pacing": "Deliberate and structured, with clear signposting and occasional reiteration of key points. The instructor frequently pauses for emphasis or to check understanding, then moves on to the next concept or challenge.",
   "fillers_and_discourse_markers": [
-    "All right, so—",
-    "Um,",
-    "Okay?",
-    "right?",
-    "So",
     "um",
-    "like",
-    "look",
-    "All right.",
-    "Okay—"
+    "okay?",
+    "so",
+    "right?",
+    "All right",
+    "And look",
+    "Let me say that again"
   ],
-  "how_ideas_are_framed": "Ideas are framed with explicit signposting (e.g., \"big picture,\" \"thesis,\" \"first challenge,\" \"Now let me walk through the agents\"), deliberate repetition for emphasis (\"Let me say that again because it matters\"), and immediate anchoring of new terms with examples. The instructor also generalizes patterns to show broader applicability and provides meta-commentary on their own pedagogical approach.",
+  "how_ideas_are_framed": "Ideas are framed with explicit signposting (e.g., \"the big picture is,\" \"first challenge\"), repetition of core concepts, and self-reflection on teaching methods. New terms are immediately anchored with examples.",
   "rhetorical_moves": [
-    "Restates thesis/main idea for emphasis",
-    "Checks for engagement with short markers",
-    "Uses analogies and generalizes patterns to different domains",
-    "Addresses potential misconceptions directly",
-    "Provides meta-commentary on teaching style",
-    "Sets clear expectations for practical application",
-    "Offers direct instruction and warnings"
+    "restates thesis",
+    "checks engagement",
+    "uses analogies and generalizations",
+    "addresses potential misconceptions",
+    "connects to practical application",
+    "self-reflection/meta-commentary on teaching style"
   ],
-  "vocabulary_register": "The vocabulary register is a blend of technical and conversational. It uses precise sociolinguistic and AI terms (e.g., \"generative models,\" \"agentic pipeline,\" \"hierarchical decomposition,\" \"context engineering\") but explains them in an accessible, often informal manner, avoiding overly academic jargon where possible.",
+  "vocabulary_register": "Balanced, combining technical terms (e.g., \"generative models,\" \"agentic pipeline,\" \"structured JSON,\" \"hierarchical decomposition\") with accessible, conversational language (e.g., \"fall apart,\" \"lost in the middle,\" \"dumb,\" \"chunks of story\").",
   "teaching_tics": [
-    "Uses 'Okay?' and 'right?' to check engagement",
-    "Uses 'so' and 'um' when thinking aloud",
-    "Repeats key phrases like 'Let me say that again because it matters.'",
-    "Frames core lessons as 'The engineering lesson is not X; the engineering lesson is Y.'",
-    "Emphasizes key takeaways with phrases like 'That is the trick.' or 'That is intentional.'",
-    "Explicitly states the course's focus: 'The whole course here is about context engineering.'"
+    "using \"Okay?\" or \"right?\" to check engagement",
+    "starting sentences with \"So\" or \"All right\"",
+    "stating \"Let me say that again because it matters.\"",
+    "framing lessons as \"The engineering lesson is not X; the engineering lesson is Y.\"",
+    "using \"And look—this pattern generalizes.\""
   ],
   "example_quotes_from_transcript": [
-    "So the big picture is: generative models are amazing at short bursts of text, but if you ask for a full screenplay in one shot, things fall apart.",
+    "generative models are amazing at short bursts of text, but if you ask for a full screenplay in one shot, things fall apart.",
     "So what I want you to take away—like, the thesis of this lecture—is that structure beats brute force.",
     "Let me say that again because it matters. Global context is your premise and your arc.",
-    "That is not because the model is “dumb”; it is because attention is finite and the training objective is not “be consistent for ninety pages.”",
-    "The engineering lesson is not “screenplays are special”; the engineering lesson is hierarchical decomposition plus explicit artifacts.",
-    "When I introduce a new term, I try to anchor it with an example immediately—like “exit beat” sounds abstract until you imagine the cut that propels you into the next sequence."
+    "That is not because the model is 'dumb'; it is because attention is finite and the training objective is not 'be consistent for ninety pages.'",
+    "The engineering lesson is not 'screenplays are special'; the engineering lesson is hierarchical decomposition plus explicit artifacts.",
+    "A few pedagogy notes in my own voice, since you are listening to me: I tend to circle back. I will restate the main idea in different words."
   ],
   "narrator_guidelines_for_tts": [
-    "Maintain a conversational and slightly informal but confident tone throughout.",
-    "Vary pacing: start with a clear, slightly slower introduction, speed up for detailed explanations, and slow down for key takeaways or repetitions.",
-    "Use a slight upward inflection for 'Okay?' and 'right?' to convey checking for understanding, as if genuinely asking the audience.",
-    "Incorporate natural, brief pauses after 'so' and 'um' when they indicate thinking aloud or transitioning.",
-    "Emphasize key phrases and thesis statements (e.g., 'structure beats brute force,' 'Let me say that again because it matters,' 'do not skip the chaining') with slightly increased volume or a more deliberate pace.",
-    "Deliver explanations of technical terms with clarity and a slightly more measured pace, especially when followed by an immediate example.",
-    "Convey enthusiasm when discussing 'where it gets fun' or 'where quality jumps,' and a serious, direct tone for warnings or critical instructions."
+    "Speak at a deliberate, slightly energetic pace, allowing for natural pauses, especially after discourse markers like 'um,' 'so,' and 'All right.'",
+    "Maintain a conversational and encouraging tone, conveying enthusiasm for the subject matter.",
+    "Emphasize key phrases and thesis statements, sometimes repeating them with slight variations for clarity.",
+    "Raise pitch slightly for engagement checks like 'Okay?' and 'right?'.",
+    "When introducing new technical terms, slow down slightly and ensure clear articulation, often followed by an immediate, illustrative example.",
+    "Convey a sense of thinking aloud when using fillers like 'um' or 'so'."
   ],
-  "title_slide_intro_requirements": "The title slide intro should be welcoming and direct, immediately stating a topic that sounds intriguing (e.g., 'AI Screenplays') but quickly grounding it in practical application. It should preview the core problem (long-form generation challenges) and hint at the structural solution, setting a tone of practical exploration and problem-solving."
+  "title_slide_intro_requirements": "The introduction should welcome the audience warmly, then immediately hook them by presenting the topic as something that 'sounds a little bit like science fiction, but it is actually very practical,' before clearly stating the specific application (e.g., 'using AI to write long documents, and we are going to use movie screenplays as our running example'). It should preview the core problem and the structured approach to solving it."
 }

@@ -75,7 +75,18 @@ Use these in order when building or debugging the assignment in Cursor:
 
 ## Grading / GitHub submission
 
-Do **not** commit images, audio, or video. JSON artifacts under `projects/project_*/` **should** be committed so the grader can inspect agent outputs. Keep `API_Key.rtf` out of the repo.
+**Commit to GitHub (Canvas URL):**
+
+- All Python: `run_lecture_pipeline.py`, `lecture_agents/`
+- `requirements.txt`, `README.md`, `.gitignore`
+- `Lecture_17_AI_screenplays.pdf` (repo root)
+- `Input/instructor_lecture_transcript.txt` (style agent input)
+- `style.json` (repo root; regenerated when you run the pipeline)
+- Under `projects/project_YYYYMMDD_HHMMSS/`: **`premise.json`**, **`arc.json`**, **`slide_description.json`**, **`slide_description_narration.json`**, plus **`slide_images/.gitkeep`** and **`audio/.gitkeep`** so empty folders exist on GitHub
+
+**Never commit:** PNG slide images, MP3s, MP4s, `_segments/`, `.venv/`, or `API_Key.rtf`. These paths are covered by `.gitignore`.
+
+Keep `API_Key.rtf` only on your machine (or pass `--keys-file`).
 
 ## Note on `instructor_lecture_transcript.txt`
 
